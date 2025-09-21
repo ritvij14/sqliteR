@@ -223,7 +223,10 @@ fn main() -> Result<()> {
                     if i == 2 && st >= 13 && st % 2 == 1 {
                         if matches!(type_str.as_deref(), Some("table")) {
                             let tbl_name = String::from_utf8_lossy(col_bytes).to_string();
-                            println!("{}", tbl_name);
+                            if tbl_name == "sqlite_sequence" {
+                                continue;
+                            }
+                            print!("{} ", tbl_name);
                         }
                     }
                 }
