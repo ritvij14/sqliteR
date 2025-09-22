@@ -1,7 +1,7 @@
 [package]
-name = "codecrafters-sqlite"
+name = "sqliter"
 version = "0.1.0"
-authors = ["Codecrafters <hello@codecrafters.io>"]
+authors = ["Ritvij <ritvij14@gmail.com>"]
 edition = "2021"
 rust-version = "1.80"
 

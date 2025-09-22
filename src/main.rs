@@ -127,7 +127,6 @@ fn main() -> Result<()> {
                 }
 
                 // Mark the start of header bytes (immediately after header_size varint)
-                let header_start = p;
                 let mut header_bytes_remaining = (header_size as usize) - bytes_read;
 
                 let mut serial_types: Vec<u64> = Vec::new();
@@ -226,7 +225,7 @@ fn main() -> Result<()> {
                             if tbl_name == "sqlite_sequence" {
                                 continue;
                             }
-                            print!("{} ", tbl_name);
+                            println!("{} ", tbl_name);
                         }
                     }
                 }
